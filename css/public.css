@@ -837,7 +837,9 @@ footer p a{
   background-color: #126dc1;
   color: #fff;
 }
-
+.padding-text-0{
+    padding: 0 !important;
+}
 
 @media screen and (max-width : 1199px){
     .main-content .top-content{
