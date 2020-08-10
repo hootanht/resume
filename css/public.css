@@ -1197,3 +1197,6 @@ footer p a {
 .float-left {
     float: left !important;
 }
+.work-sample-image{
+    height: 150px;
+}
