@@ -1,4 +1,6 @@
-﻿@import url(fontiran.css); /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+﻿@import url(fontiran.css);
+
+/* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
 body {
 	font-family: IRANSans !important;
 	font-weight: 300;
@@ -6,61 +8,87 @@ body {
 	background-color: #E2E2E2;
 	margin: 0;
 }
-h1, h2, h3, h4, h5, h6,input, textarea {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
 	font-family: IRANSans !important;
 }
+
 h1 {
 	font-weight: bold;
 }
+
 .wrapper {
 	max-width: 900px;
 	margin: 0 auto;
 }
+
 .ltr {
 	direction: ltr;
 }
+
 .text-right {
 	text-align: right;
 }
+
 .text-center {
 	text-align: center;
 }
+
 .text-left {
 	text-align: left;
 }
+
 .text-small {
 	font-size: 0.8em;
 }
+
 .text-xsmall {
 	font-size: 0.6em;
 }
+
 .text-large {
 	font-size: 1.2em;
 }
+
 .text-xlarge {
 	font-size: 1.4em;
 }
+
 .text-underline {
-	text-decoration:underline;
+	text-decoration: underline;
 }
+
 .text-ultralight {
 	font-weight: 200;
 }
+
 .text-light {
 	font-weight: 300;
 }
+
 .text-regular {
 	font-weight: normal;
 }
+
 .text-medium {
 	font-weight: 500;
 }
+
 .text-bold {
 	font-weight: bold;
 }
+
 .text-black {
 	font-weight: 900;
 }
+
 blockquote {
 	font-weight: 500;
 	padding: 10px;
@@ -110,23 +138,25 @@ blockquote {
 .farsiparagraph {
 	font-size: 1em;
 	width: 47%;
-	float:right;
+	float: right;
 	padding-right: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 
 }
+
 .englishparagraph {
 	font-size: 1em;
 	width: 47%;
 	float: left;
-	direction:ltr;
+	direction: ltr;
 	padding-left: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 
 
 }
+
 .rightbox {
 	width: 60%;
 	padding-right: 20px;
@@ -153,7 +183,7 @@ blockquote {
 
 
 .lefttbox {
-	
+
 	padding-right: 20px;
 	padding-left: 4px;
 	float: right;
@@ -180,6 +210,7 @@ blockquote {
 	color: #333333;
 	margin-top: 100px;
 }
+
 .footer {
 	font-weight: 300;
 	font-size: 0.7em;
