@@ -39,7 +39,9 @@ body {
     font-family: 'IRANSans', tahoma;
     color: #30313e;
     font-size: 14px;
-    word-spacing: -1px
+    word-spacing: -1px;
+    direction: ltr !important;
+    font-family: Roboto !important;
 }
 
 html,
@@ -250,7 +252,7 @@ form button,
 }
 
 .main-content .profile-layer .content {
-    padding: 22px 0 0;
+    padding: 75px 0 0;
     text-align: center;
     width: 100%
 }
@@ -451,14 +453,14 @@ form button,
     position: relative;
     line-height: 25px;
     height: 25px;
-    border-right: 4px solid #3893e7
+    border-left: 4px solid #3893e7
 }
 
 .heading h2 {
     line-height: 25px;
     font-size: 18px;
     font-weight: bold;
-    padding-right: 30px
+    padding-left: 30px
 }
 
 .progress {
@@ -500,7 +502,7 @@ form button,
 
 .resume-tab .item {
     width: 33.33%;
-    float: right;
+    float: left;
     padding: 5px 20px 20px
 }
 
@@ -537,7 +539,7 @@ form button,
 
 .my-history .inner ul li {
     width: 100%;
-    padding-right: 13px;
+    padding-left: 13px;
     position: relative;
     line-height: 25px;
     margin-bottom: 8px;
@@ -552,7 +554,7 @@ form button,
     -webkit-border-radius: 10px;
     background-color: #42ba5c;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 11px;
     content: ''
 }
