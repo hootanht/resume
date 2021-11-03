@@ -1213,3 +1213,6 @@ footer p a {
 .netfoundation-logo {
     max-height: 80px !important;
 }
+.mx-height {
+    max-height: 250px !important;
+}
