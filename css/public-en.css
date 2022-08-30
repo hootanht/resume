@@ -1208,6 +1208,7 @@ footer p a {
 }
 .work-sample-image{
     height: 150px;
+    width:100%;
 }
 
 .netfoundation-logo {
