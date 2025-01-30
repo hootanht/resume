@@ -1,0 +1,760 @@
+/* ------------------------------------------------
+ Author: Melika Khaliliyan
+ 
+ Template Name: 
+ version: 1.0.0
+------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;display=swap");
+/*Fonts*/
+@font-face {
+  font-family: "IRY";
+  src: url("../fonts/IRY-Medium.eot");
+  src: url("../fonts/IRY-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/IRY-Medium.woff2") format("woff2"),
+    url("../fonts/IRY-Medium.woff") format("woff"),
+    url("../fonts/IRY-Medium.ttf") format("truetype"),
+    url("../fonts/IRY-Medium.svg#IRY-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ISDN";
+  src: url("../fonts/ISDN.eot");
+  src: url("../fonts/ISDN.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ISDN.woff2") format("woff2"),
+    url("../fonts/ISDN.woff") format("woff"),
+    url("../fonts/ISDN.ttf") format("truetype"),
+    url("../fonts/ISDN.svg#ISDN") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+/*Fonts*/
+/* -----------------------------------------------------------------
+    - General Styles
+----------------------------------------------------------------- */
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: "IRY";
+}
+* {
+  letter-spacing: 0 !important;
+}
+.bg-triangles {
+  background-position: right top, left bottom;
+}
+
+/* -----------------------------------------------------------------
+    - Typography
+----------------------------------------------------------------- */
+.title-icon {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+.title__separate::before,
+.title__separate::after {
+  left: auto;
+  right: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .block-quote {
+    padding-left: 0;
+    padding-right: 3.75rem;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .block-quote {
+    padding-right: 0;
+  }
+}
+.block-quote::before {
+  left: auto;
+  right: -3.375rem;
+}
+@media only screen and (max-width: 991px) {
+  .block-quote::before {
+    left: auto;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .block-quote::before {
+    left: 0;
+    right: auto;
+  }
+}
+.block-quote__author {
+  padding-left: 0;
+  padding-right: 3rem;
+}
+@media only screen and (max-width: 580px) {
+  .block-quote__author {
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+}
+.block-quote__author::before {
+  left: auto;
+  right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Form
+----------------------------------------------------------------- */
+.form-control {
+  text-align: right;
+}
+.form-control__icon {
+  padding-left: 0;
+  padding-left: 3.375rem;
+}
+@media only screen and (max-width: 580px) {
+  .form-control__icon {
+    padding-left: 0;
+    padding-left: 2.8125rem;
+  }
+}
+
+.form-group .font-icon {
+  left: auto;
+  right: 2.375rem;
+}
+@media only screen and (max-width: 580px) {
+  .form-group .font-icon {
+    left: auto;
+    right: 2.125rem;
+  }
+}
+
+.help-block {
+  padding-left: 0;
+  padding-right: 0.375rem;
+}
+
+.custom-control-label {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+.btn .font-icon {
+  margin-left: 0.375rem;
+  margin-right: 0;
+}
+
+.dropdown-menu::before {
+  left: auto;
+  right: 1.125rem;
+}
+
+/* -----------------------------------------------------------------
+    - Preloader
+----------------------------------------------------------------- */
+.preloader__progress {
+  left: auto;
+  right: 0;
+  right-left: auto;
+  right-right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Header
+----------------------------------------------------------------- */
+.header__left {
+  padding-left: 1.875rem;
+  padding-right: 0;
+}
+.header__left::before {
+  left: 0;
+  right: auto;
+}
+@media only screen and (max-width: 991px) {
+  .header__left {
+    padding-left: 0;
+  }
+  .header__left::before {
+    left: 0;
+    right: auto;
+  }
+}
+.header__right {
+  padding-left: 0;
+  padding-right: 1.875rem;
+}
+@media only screen and (max-width: 991px) {
+  .header__right {
+    padding-right: 0;
+  }
+}
+.header__base-info {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+@media only screen and (max-width: 991px) {
+  .header__base-info {
+    margin-right: 0;
+  }
+}
+.header__social li {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+.header__social li:last-child {
+  margin-left: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Sections
+----------------------------------------------------------------- */
+.social__link {
+  margin-left: 0;
+  margin-right: 0.8125rem;
+}
+.social__link:first-child {
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Portfolio
+----------------------------------------------------------------- */
+@media only screen and (min-width: 769px) {
+  .filter__item {
+    padding-left: 1rem;
+    padding-right: 0;
+  }
+  .filter__item::before {
+    left: 6px;
+    right: auto;
+  }
+  .filter__item:last-child {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .select {
+    text-align: right;
+  }
+  .select .placeholder:after {
+    left: 2px;
+    right: auto;
+  }
+  .select ul {
+    left: auto;
+    right: 0;
+  }
+  .select ul li {
+    text-align: right;
+  }
+}
+/* -----------------------------------------------------------------
+    - News
+----------------------------------------------------------------- */
+.news-item__date {
+  border-radius: 0 20px 0 20px;
+}
+
+/* -----------------------------------------------------------------
+    - Single post
+----------------------------------------------------------------- */
+.footer-post__share .font-icon {
+  margin-left: 0.6875rem;
+  margin-right: 0;
+}
+
+.comment-box .comment-box {
+  margin-left: 0;
+  margin-right: 3rem;
+}
+@media only screen and (max-width: 580px) {
+  .comment-box .comment-box {
+    margin-left: 0;
+    margin-right: 1.25rem;
+  }
+}
+.comment-box__inner {
+  padding-left: 1.25rem;
+  padding-right: 1.375rem;
+}
+@media only screen and (max-width: 580px) {
+  .comment-box__inner {
+    padding-left: 1rem;
+    padding-right: 1.125rem;
+  }
+}
+.comment-box .avatar {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+.comment-box__footer li {
+  margin-left: 2rem;
+  margin-right: 0;
+}
+@media only screen and (max-width: 580px) {
+  .comment-box__footer li {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+}
+.comment-box__footer li:last-child {
+  margin-left: 0;
+}
+.comment-box__footer span {
+  padding-left: 0;
+  padding-right: 0.375rem;
+}
+
+.comment-form .textarea {
+  padding-left: 4.5rem;
+  padding-right: 2.875rem;
+}
+@media only screen and (max-width: 580px) {
+  .comment-form .textarea {
+    padding-left: 3.25rem;
+    padding-right: 2.5rem;
+  }
+}
+.comment-form .btn {
+  margin-left: 0.5rem;
+  margin-right: 0;
+  left: 0;
+  right: auto;
+}
+.comment-form .dropdown {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+.comment-form .dropdown-menu {
+  margin-left: 0;
+  margin-right: -1rem;
+}
+
+.social-auth__item {
+  margin-left: 0.375rem;
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------------------
+    - Testimonials
+----------------------------------------------------------------- */
+.review-item {
+  background-position: left 1.875rem top 1.875rem;
+}
+.review-item__textbox {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 580px) {
+  .review-item__textbox {
+    margin-right: 0;
+  }
+}
+
+/* -----------------------------------------------------------------
+    - Timeline
+----------------------------------------------------------------- */
+.timeline {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+.timeline__item {
+  border-left: 0;
+  border-right: 1px solid #ebf0f2;
+  padding-left: 0;
+  padding-right: 1.4rem;
+}
+.timeline__item::before {
+  left: auto;
+  right: -5px;
+}
+
+/* -----------------------------------------------------------------
+    - Timeline
+----------------------------------------------------------------- */
+.timeline {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+.timeline__item {
+  border-left-width: 0;
+  border-right-width: 1px;
+  padding-left: 0;
+  padding-right: 1.375rem;
+}
+.timeline__item::before {
+  left: 0;
+  right: -0.3125rem;
+}
+
+/* Progress  */
+.progress {
+  text-align: left;
+}
+.progress .progress-text {
+  left: auto;
+  right: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .progress-text span:nth-child(2) {
+    float: left;
+  }
+}
+
+/* Modern Skills Styling - Enhanced */
+.skills-category {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-grid::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 100px);
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0,
+    rgba(0, 255, 0, 0.05) 50%,
+    transparent 100%
+  );
+  animation: codeRain 20s linear infinite;
+  z-index: 0;
+}
+
+.skill-card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card:hover::before {
+  transform: translateY(0);
+}
+
+/* Enhanced Icon Styles */
+.skill-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 25px;
+  margin: 0 auto 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  z-index: 3;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: iconPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Enhanced Text Styles */
+.skill-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all 0.4s ease;
+  position: relative;
+  text-align: center;
+}
+
+.skill-card:hover h4 {
+  transform: scale(1.05);
+  color: var(--color-accent);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fancy Animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes iconPop {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(8deg);
+  }
+}
+
+/* Floating Effect */
+.skill-icon i {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+/* Glowing Effect on Hover */
+.skill-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.skill-card:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.1;
+}
+
+/* Text Animation */
+.skill-card h4 {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card h4::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent);
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card:hover h4::after {
+  transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .skill-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 1.8rem;
+  }
+
+  .skill-card h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 1rem;
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+/* -----------------------------------------------------------------
+    - Other
+----------------------------------------------------------------- */
+.back-to-top {
+  left: 40px;
+  right: 0;
+}
+@media only screen and (max-width: 580px) {
+  .back-to-top {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=style-rtl.css.map */
+
+/* Global Animation Styles */
+[data-aos] {
+  opacity: 0;
+  transition-property: all;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Timeline Animations */
+.timeline__item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.timeline__item.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Animations */
+.row[data-aos] {
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.row[data-aos].aos-animate {
+  transform: translateY(0);
+}
+
+/* Stagger children animations */
+.timeline__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.timeline__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.timeline__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.timeline__item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code Rain Animation */
+.code-particle {
+  position: absolute;
+  color: var(--color-accent);
+  opacity: 0;
+  font-family: monospace;
+  font-size: 14px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  animation: particleFall linear infinite;
+  text-shadow: 0 0 8px var(--color-accent);
+}
+
+@keyframes codeRain {
+  0% {
+    background-position: 0 -100px;
+  }
+  100% {
+    background-position: 0 calc(100% + 100px);
+  }
+}
+
+@keyframes particleFall {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  5% {
+    opacity: var(--particle-opacity);
+  }
+  95% {
+    opacity: var(--particle-opacity);
+  }
+  to {
+    transform: translateY(calc(100vh + 20px));
+    opacity: 0;
+  }
+}
+
+/* Glowing effect for particles */
+.code-particle {
+  --particle-opacity: 0.3;
+  filter: blur(0.5px);
+}
+
+.code-particle:nth-child(3n) {
+  --particle-opacity: 0.5;
+  filter: blur(0);
+}
+
+.code-particle:nth-child(5n) {
+  --particle-opacity: 0.2;
+  filter: blur(1px);
+}
+
+/* Add this JavaScript to create falling code particles */
