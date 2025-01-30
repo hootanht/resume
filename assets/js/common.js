@@ -585,4 +585,36 @@ $(document).ready(function() {
 
     // Initialize code rain effect
     document.addEventListener('DOMContentLoaded', createCodeRain);
+
+    // Initialize Swiper
+    const recommendationsSwiper = new Swiper('.recommendations-slider .swiper-container', {
+        slidesPerView: 1, // Default for mobile
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // >= 1920px
+            1920: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            // >= 1200px
+            1200: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            // >= 768px
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            }
+        }
+    });
 });

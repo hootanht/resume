@@ -402,40 +402,51 @@ body {
 
 /* Modern Skills Styling - Enhanced */
 .skills-category {
-  margin-bottom: 4rem;
-  position: relative;
+  margin-bottom: 3rem;
+}
+
+.skills-category__title {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  padding-right: 1rem;
+  border-right: 3px solid var(--color-accent);
+}
+
+.skills-category .skills-grid {
+  margin-bottom: 0;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 2rem;
-  padding: 1.5rem;
-  position: relative;
-  overflow: hidden;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.2rem;
+  padding: 1rem;
 }
 
 .skills-grid::before {
   content: "";
   position: absolute;
-  top: -100px;
+  top: -20px;
   left: 0;
   width: 100%;
-  height: calc(100% + 100px);
+  height: calc(100% + 40px);
   pointer-events: none;
   background: repeating-linear-gradient(
     180deg,
     transparent 0,
-    rgba(0, 255, 0, 0.05) 50%,
+    rgba(0, 255, 0, 0.01) 50%,
     transparent 100%
   );
   animation: codeRain 20s linear infinite;
-  z-index: 0;
+  z-index: -1;
+  opacity: 0.5;
+  clip-path: inset(0 0 0 0);
 }
 
 .skill-card {
   position: relative;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(5px);
@@ -475,14 +486,14 @@ body {
 
 /* Enhanced Icon Styles */
 .skill-icon {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 25px;
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: rgba(255, 255, 255, 0.95);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -500,7 +511,7 @@ body {
 /* Enhanced Text Styles */
 .skill-card h4 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-text);
   transition: all 0.4s ease;
@@ -601,37 +612,21 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 1.2rem;
-  }
-
-  .skill-icon {
-    width: 75px;
-    height: 75px;
-    font-size: 1.8rem;
-  }
-
-  .skill-card h4 {
-    font-size: 1rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .skill-card {
-    padding: 1rem;
-  }
-
-  .skill-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
   }
 }
 
@@ -758,3 +753,367 @@ html {
 }
 
 /* Add this JavaScript to create falling code particles */
+
+/* Skills Categories */
+.skills-category {
+  margin-bottom: 3rem;
+}
+
+.skills-category__title {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  padding-right: 1rem;
+  border-right: 3px solid var(--color-accent);
+}
+
+.skills-category .skills-grid {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-category {
+    margin-bottom: 2rem;
+  }
+
+  .skills-category__title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Remove the effect from other sections */
+.timeline::before {
+  background: none;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ebf0f2; /* Timeline line color */
+  display: none;
+}
+
+/* Code Rain effect - Strictly limit to skills section */
+.skills-grid {
+  position: relative;
+  isolation: isolate; /* Create new stacking context */
+}
+
+.skills-grid::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 40px);
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0,
+    rgba(0, 255, 0, 0.01) 50%,
+    /* Further reduced opacity */ transparent 100%
+  );
+  animation: codeRain 20s linear infinite;
+  z-index: -1; /* Place behind content */
+  opacity: 0.5;
+}
+
+/* Remove any potential overflow */
+.skills-category {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Ensure timeline styles are clean */
+.timeline {
+  position: relative;
+  isolation: isolate;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ebf0f2;
+  z-index: 1;
+}
+
+/* Clean up any duplicate timeline styles */
+.timeline {
+  padding-right: 0.5rem;
+  background: transparent;
+}
+
+/* Recommendations Slider - Enhanced */
+.recommendations-slider {
+  position: relative;
+  padding: 2rem 0;
+  overflow: hidden;
+  margin: 0 -1rem;
+}
+
+.recommendation-card {
+  background: #fff; /* Changed from rgba to solid white */
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.recommendation-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.recommendation-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recommendation-link:hover .recommendation-card {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.recommender-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 1rem;
+  object-fit: cover;
+  border: 2px solid var(--color-accent);
+}
+
+.recommender-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.recommender-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommender-title {
+  font-size: 0.9rem;
+  color: var(--color-text-alt);
+  margin: 0.3rem 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recommendation-date {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+}
+
+.recommendation-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendation-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Enhanced Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 45px;
+  height: 45px;
+  background: #fff !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove default Swiper arrow styles */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none !important;
+}
+
+/* Custom arrow icons - Reversed for RTL */
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Reversed icons for RTL */
+.swiper-button-prev::before {
+  content: "\f054"; /* FontAwesome chevron-right */
+}
+
+.swiper-button-next::before {
+  content: "\f053"; /* FontAwesome chevron-left */
+}
+
+/* Hover effects */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #fff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-50%) scale(1.05);
+}
+
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+  color: var(--color-accent);
+}
+
+/* RTL Position Fixes */
+.swiper-button-next {
+  left: -10px;
+  right: auto;
+}
+
+.swiper-button-prev {
+  right: -10px;
+  left: auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .recommendations-slider {
+    margin: 0;
+    padding: 1rem 0 4rem 0; /* Added bottom padding for navigation buttons */
+  }
+
+  .recommendation-card {
+    padding: 1.25rem;
+    margin: 0.5rem;
+  }
+
+  .recommender-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .recommender-name {
+    font-size: 1rem;
+  }
+
+  .recommender-title {
+    font-size: 0.85rem;
+  }
+
+  .recommendation-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    -webkit-line-clamp: 5;
+  }
+
+  /* Navigation buttons positioning for mobile */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+
+  .swiper-button-next {
+    left: calc(50% - 50px);
+  }
+
+  .swiper-button-prev {
+    right: calc(50% - 50px);
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendation-card {
+    padding: 1rem;
+    margin: 0.25rem;
+  }
+
+  .recommendation-text {
+    -webkit-line-clamp: 4; /* Show less text on smaller screens */
+  }
+}
+
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Remove underline effect */
+.contact-link::after {
+  display: none;
+}
+
+/* For mobile devices - make the touch area larger */
+@media (max-width: 768px) {
+  .contact-link {
+    padding: 5px 0;
+  }
+}
